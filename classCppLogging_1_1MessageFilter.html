@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>C++ Logging Library | m.css docs</title>
+  <title>CppLogging::MessageFilter class | m.css docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600&amp;subset=latin-ext" />
   <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
   <link rel="icon" href="favicon-light.png" type="image/png" />
@@ -58,9 +58,93 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          C++ Logging Library
+          <span class="m-breadcrumb"><a href="namespaceCppLogging.html">CppLogging</a>::<wbr/></span>MessageFilter <span class="m-thin">class</span>
         </h1>
-<p>C++ Logging Library provides functionality to log different events with a high throughput in multi-thread environment into different sinks (console, files, rolling files, syslog, etc.). Logging configuration is very flexible and gives functionality to build flexible logger hierarchy with combination of logging processors (sync, async), filters, layouts (binary, text) and appenders.</p><p>This document contains <a href="namespaceCppLogging.html" class="m-dox">CppLogging</a> API references.</p><p>Library description, features, requirements and usage examples can be find on GitHub: <a href="https://github.com/chronoxor/CppLogging">https:/<wbr />/<wbr />github.com/<wbr />chronoxor/<wbr />CppLogging</a></p>
+        <p>Message filter.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Message filters out logging records which message field is not matched to the given regular expression pattern.</p><p>Thread-safe.</p>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-dox">
+            <dt>
+              class <a href="classCppLogging_1_1Filter.html" class="m-dox">Filter</a>
+            </dt>
+            <dd>Logging filter interface.</dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-dox">
+            <dt>
+              <span class="m-dox-wrap-bumper"><a href="#a6f6cf5dc38f6422abcc0a88e6d97803a" class="m-dox">MessageFilter</a>(</span><span class="m-dox-wrap">const std::regex&amp; pattern) <span class="m-label m-flat m-info">explicit</span> </span>
+            </dt>
+            <dd>Initialize message filter with a given regular expression pattern.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-dox">
+            <dt>
+              <span class="m-dox-wrap-bumper">auto <a href="#af4d859d9a5eaad69c6493b5a49cded33" class="m-dox">FilterRecord</a>(</span><span class="m-dox-wrap"><a href="classCppLogging_1_1Record.html" class="m-dox">Record</a>&amp; record) override -&gt; bool <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><a href="classCppLogging_1_1Filter.html" class="m-dox">Filter</a> the given logging record.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-dox-details" id="a6f6cf5dc38f6422abcc0a88e6d97803a"><div>
+            <h3>
+              <span class="m-dox-wrap-bumper"> CppLogging::<wbr />MessageFilter::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#a6f6cf5dc38f6422abcc0a88e6d97803a" class="m-dox-self">MessageFilter</a>(</span><span class="m-dox-wrap">const std::regex&amp; pattern) <span class="m-label m-info">explicit</span> </span></span>
+            </h3>
+            <p>Initialize message filter with a given regular expression pattern.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pattern</td>
+                  <td>- Regular expression pattern</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-dox-details" id="af4d859d9a5eaad69c6493b5a49cded33"><div>
+            <h3>
+              <span class="m-dox-wrap-bumper">bool CppLogging::<wbr />MessageFilter::<wbr /></span><span class="m-dox-wrap"><span class="m-dox-wrap-bumper"><a href="#af4d859d9a5eaad69c6493b5a49cded33" class="m-dox-self">FilterRecord</a>(</span><span class="m-dox-wrap"><a href="classCppLogging_1_1Record.html" class="m-dox">Record</a>&amp; record) override <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p><a href="classCppLogging_1_1Filter.html" class="m-dox">Filter</a> the given logging record.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">record</td>
+                  <td>- Logging record</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>&#x27;true&#x27; if the logging record should be processed, &#x27;false&#x27; if the logging record was filtered out</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+        </section>
       </div>
     </div>
   </div>

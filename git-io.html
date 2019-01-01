@@ -61,11 +61,31 @@
           Git io
         </h1>
         <p>Guide how to git.</p>
-<pre class="m-code">git pull
+<p>git流程：</p><pre class="m-code">git pull
 git add --all
 git commit -m <span class="s2">&quot;menu&quot;</span>
 git remote add origin https://github.com/firebirdtools/firebirdtools.github.io.git
-git push -u origin master</pre>
+git push -u origin master</pre><p>实例：</p><pre class="m-code">firebird@tools:~/gitcode/firebirdtools.github.io$ git pull
+已经是最新的。
+firebird@tools:~/gitcode/firebirdtools.github.io$ git add --all
+firebird@tools:~/gitcode/firebirdtools.github.io$ git commit -m <span class="s2">&quot;menu git-help&quot;</span>
+<span class="o">[</span>master 3027b6e<span class="o">]</span> menu git-help
+ <span class="m">1</span> file changed, <span class="m">5</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+firebird@tools:~/gitcode/firebirdtools.github.io$ git remote add origin https://github.com/firebirdtools/firebirdtools.github.io.git
+fatal: 远程 origin 已经存在。
+firebird@tools:~/gitcode/firebirdtools.github.io$ git push -u origin master
+Username <span class="k">for</span> <span class="s1">&#39;https://github.com&#39;</span>: firebirdtools
+Password <span class="k">for</span> <span class="s1">&#39;https://firebirdtools@github.com&#39;</span>: 
+对象计数中: <span class="m">3</span>, 完成.
+Delta compression using up to <span class="m">4</span> threads.
+压缩对象中: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, 完成.
+写入对象中: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, <span class="m">450</span> bytes <span class="p">|</span> <span class="m">450</span>.00 KiB/s, 完成.
+Total <span class="m">3</span> <span class="o">(</span>delta <span class="m">2</span><span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>
+remote: Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>, completed with <span class="m">2</span> <span class="nb">local</span> objects.
+To https://github.com/firebirdtools/firebirdtools.github.io
+   19e4888..3027b6e  master -&gt; master
+分支 <span class="s1">&#39;master&#39;</span> 设置为跟踪来自 <span class="s1">&#39;origin&#39;</span> 的远程分支 <span class="s1">&#39;master&#39;</span>。
+firebird@tools:~/gitcode/firebirdtools.github.io$</pre>
       </div>
     </div>
   </div>

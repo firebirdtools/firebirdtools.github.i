@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>C++ Logging Library | CppLogging docs</title>
+  <title>Git help &raquo; Git io | CppLogging docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
   <link rel="icon" href="firebird.png" type="image/png" />
@@ -29,7 +29,7 @@
             <li>
               <a href="git-help.html">Git help</a>
               <ol>
-                <li><a href="git-io.html">Git io</a></li>
+                <li><a href="git-io.html" id="m-navbar-current">Git io</a></li>
               </ol>
             </li>
             <li>
@@ -58,28 +58,35 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          C++ Logging Library
+          <span class="m-breadcrumb"><a href="git-help.html">Git help</a> &raquo;</span>
+          Git io
         </h1>
-<p>C++ Logging Library provides functionality to log different events with a high throughput in multi-thread environment into different sinks (console, files, rolling files, syslog, etc.). Logging configuration is very flexible and gives functionality to build flexible logger hierarchy with combination of logging processors (sync, async), filters, layouts (binary, text) and appenders.</p><p>This document contains <a href="namespaceCppLogging.html" class="m-dox">CppLogging</a> API references.</p><p>Library description, features, requirements and usage examples can be find on GitHub: <a href="https://github.com/firebirdtools/CppLogging">https:/<wbr />/<wbr />github.com/<wbr />firebirdtools/<wbr />CppLogging</a></p><section id="License"><h2><a href="#License">License</a></h2><p>MIT License</p><pre>    Copyright (c) 2016 Ivan Shynkarenka
-
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the &quot;Software&quot;), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.
-</pre></section>
+        <p>Guide how to git.</p>
+<p>git流程：</p><pre class="m-code">git pull
+git add --all
+git commit -m <span class="s2">&quot;menu&quot;</span>
+git remote add origin https://github.com/firebirdtools/firebirdtools.github.io.git
+git push -u origin master</pre><p>实例：</p><pre class="m-code">firebird@tools:~/gitcode/firebirdtools.github.io$ git pull
+已经是最新的。
+firebird@tools:~/gitcode/firebirdtools.github.io$ git add --all
+firebird@tools:~/gitcode/firebirdtools.github.io$ git commit -m <span class="s2">&quot;menu git-help&quot;</span>
+<span class="o">[</span>master 3027b6e<span class="o">]</span> menu git-help
+ <span class="m">1</span> file changed, <span class="m">5</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">1</span> deletion<span class="o">(</span>-<span class="o">)</span>
+firebird@tools:~/gitcode/firebirdtools.github.io$ git remote add origin https://github.com/firebirdtools/firebirdtools.github.io.git
+fatal: 远程 origin 已经存在。
+firebird@tools:~/gitcode/firebirdtools.github.io$ git push -u origin master
+Username <span class="k">for</span> <span class="s1">&#39;https://github.com&#39;</span>: firebirdtools
+Password <span class="k">for</span> <span class="s1">&#39;https://firebirdtools@github.com&#39;</span>: 
+对象计数中: <span class="m">3</span>, 完成.
+Delta compression using up to <span class="m">4</span> threads.
+压缩对象中: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, 完成.
+写入对象中: <span class="m">100</span>% <span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>, <span class="m">450</span> bytes <span class="p">|</span> <span class="m">450</span>.00 KiB/s, 完成.
+Total <span class="m">3</span> <span class="o">(</span>delta <span class="m">2</span><span class="o">)</span>, reused <span class="m">0</span> <span class="o">(</span>delta <span class="m">0</span><span class="o">)</span>
+remote: Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>, completed with <span class="m">2</span> <span class="nb">local</span> objects.
+To https://github.com/firebirdtools/firebirdtools.github.io
+   19e4888..3027b6e  master -&gt; master
+分支 <span class="s1">&#39;master&#39;</span> 设置为跟踪来自 <span class="s1">&#39;origin&#39;</span> 的远程分支 <span class="s1">&#39;master&#39;</span>。
+firebird@tools:~/gitcode/firebirdtools.github.io$</pre>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - A category</title><link href="/" rel="alternate"></link><link href="/feeds/a-category.atom.xml" rel="self"></link><id>/</id><updated>2017-12-09T00:00:00+01:00</updated><entry><title>An article</title><link href="/an-article.html" rel="alternate"></link><published>2017-12-09T00:00:00+01:00</published><updated>2017-12-09T00:00:00+01:00</updated><author><name>Explicit Author</name></author><id>tag:None,2017-12-09:/an-article.html</id><summary type="html">&lt;p class="first last"&gt;The summary.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog - A category</title><link href="/" rel="alternate"></link><link href="/feeds/a-category.atom.xml" rel="self"></link><id>/</id><updated>2017-12-09T00:00:00+01:00</updated><entry><title>An article</title><link href="/an-article.html" rel="alternate"></link><published>2017-12-09T00:00:00+01:00</published><updated>2017-12-09T00:00:00+01:00</updated><author><name>Explicit Author</name></author><id>tag:None,2017-12-09:/an-article.html</id><summary type="html">&lt;p&gt;The summary.
 On multiple
 lines.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;The content, expanded fully on the page.&lt;/p&gt;

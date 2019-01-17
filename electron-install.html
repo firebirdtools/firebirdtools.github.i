@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>include/logging/layouts/binary_layout.h file | CppLogging docs</title>
+  <title>Doc help &raquo; Electron help &raquo; Electron install | CppLogging docs</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark+doxygen.compiled.css" />
   <link rel="icon" href="firebird.png" type="image/png" />
@@ -55,38 +55,55 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <span class="m-breadcrumb"><a href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a>/</span><span class="m-breadcrumb"><a href="dir_7188461832bb92671066220d237ea5f7.html">logging</a>/</span><span class="m-breadcrumb"><a href="dir_428a3d3980114642a8570347f9ec39ab.html">layouts</a>/</span>binary_layout.h <span class="m-thin">file</span>
+          <span class="m-breadcrumb"><a href="doc-help.html">Doc help</a> &raquo;</span>
+          <span class="m-breadcrumb"><a href="electron-help.html">Electron help</a> &raquo;</span>
+          Electron install
         </h1>
-        <p>Binary layout definition.</p>
-        <div class="m-block m-default">
-          <h3>Contents</h3>
-          <ul>
-            <li>
-              Reference
-              <ul>
-                <li><a href="#namespaces">Namespaces</a></li>
-                <li><a href="#nested-classes">Classes</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-<aside class="m-note m-default"><h4>Author</h4><p>Ivan Shynkarenka</p></aside><aside class="m-note m-default"><h4>Date</h4><p>08.07.2016</p></aside><aside class="m-note m-default"><h4>Copyright</h4><p>MIT License</p></aside>
-        <section id="namespaces">
-          <h2><a href="#namespaces">Namespaces</a></h2>
-          <dl class="m-dox">
-            <dt>namespace <a href="namespaceCppLogging.html" class="m-dox">CppLogging</a></dt>
-            <dd>C++ Logging project definitions.</dd>
-          </dl>
-        </section>
-        <section id="nested-classes">
-          <h2><a href="#nested-classes">Classes</a></h2>
-          <dl class="m-dox">
-            <dt>
-              class <a href="classCppLogging_1_1BinaryLayout.html" class="m-dox">CppLogging::BinaryLayout</a>
-            </dt>
-            <dd>Binary layout.</dd>
-          </dl>
-        </section>
+        <p>Guide how to use electron install.</p>
+<h3>参考文档</h3><blockquote><ol><li><a href="https://electronjs.org/docs/tutorial/installation">Electron安装文档</a></li><li><a href="https://electronjs.org/docs/development/build-instructions-linux">Electron-Ubuntu构建步骤</a></li><li><a href="https://blog.csdn.net/qq_14834431/article/details/79512526">Electron桌面应用：环境搭建</a></li><li><a href="https://segmentfault.com/a/1190000007542620">在Ubuntu上安装最新稳定版本的node及npm</a></li></ol></blockquote><h3>开发环境介绍</h3><blockquote><ul><li>主机操作系统：deepin 64-bit</li><li>Python版本：Python3</li></ul></blockquote><h3>Electron简介</h3><blockquote><p>Electron是由Github开发，基于Chromium和Node.js，使用JavaScript、HTML和CSS等Web技术创建跨平台原生桌面应用的框架。兼容Mac、Window和Linux，它构建的应用可在这三个操作系统上面运行，借助Electron，我们可以使用纯JavaScript来调用丰富的原生APIs。</p></blockquote><h3>安装系统依赖库</h3><pre class="m-code">sudo apt-get install build-essential clang libdbus-1-dev libgtk-3-dev <span class="se">\</span>
+                       libnotify-dev libgnome-keyring-dev libgconf2-dev <span class="se">\</span>
+                       libasound2-dev libcap-dev libcups2-dev libxtst-dev <span class="se">\</span>
+                       libxss1 libnss3-dev gcc-multilib g++-multilib curl <span class="se">\</span>
+                       gperf bison python-dbusmock</pre><hr/><h3>Electron安装</h3><h4>安装node&amp;npm</h4><pre class="m-code">firebird@tools:~$ sudo apt install nodejs-legacy
+正在读取软件包列表... 完成
+正在分析软件包的依赖关系树       
+正在读取状态信息... 完成       
+有一些软件包无法被安装。如果您用的是 unstable 发行版，这也许是
+因为系统无法达到您要求的状态造成的。该版本中可能会有一些您需要的软件
+包尚未被创建或是它们已被从新到<span class="o">(</span>Incoming<span class="o">)</span>目录移出。
+下列信息可能会对解决问题有所帮助：
+
+下列软件包有未满足的依赖关系：
+ nodejs-legacy : 依赖: nodejs <span class="o">(</span>&gt;<span class="o">=</span> <span class="m">0</span>.6.19~dfsg1-3~<span class="o">)</span> 但是它将不会被安装
+E: 无法修正错误，因为您要求某些软件包保持现状，就是它们破坏了软件包间的依赖关系。</pre><p>deepin是基于debian的。参考<a href="https://nodejs.org/en/download/package-manager/">nodejs官网</a>，找到安装说明。</p><p>Node.js v11.x:</p><pre class="m-code"><span class="c1"># Using Ubuntu</span>
+curl -sL https://deb.nodesource.com/setup_11.x <span class="p">|</span> sudo -E bash -
+sudo apt-get install -y nodejs
+
+<span class="c1"># Using Debian, as root</span>
+curl -sL https://deb.nodesource.com/setup_11.x <span class="p">|</span> bash -
+apt-get install -y nodejs</pre><p>安装nodejs、npm、electron：</p><pre class="m-code">sudo apt-get install -y nodejs
+sudo apt-get install -y npm
+npm --version
+node --version
+npm init
+sudo npm install -g cnpm --registry<span class="o">=</span>https://registry.npm.taobao.org
+sudo cnpm  install -g electron</pre><p>一般执行了 <code class="m-code">sudo cnpm  install -g electron</code>，就无需再执行 <code class="m-code">npm install</code>。</p><p>运行打包：</p><pre class="m-code"><span class="c1"># npm install</span>
+cnpm install
+npm start
+
+<span class="c1"># npm install --save-dev electron-packager</span>
+sudo npm install electron-packager -g
+electron-packager . eet --out ../eet</pre><p><a href="https://electronjs.org/#get-started">Electron API 演示应用程序</a></p><pre class="m-code"><span class="c1"># 克隆示例项目的仓库</span>
+git clone https://github.com/electron/electron-quick-start
+
+<span class="c1"># 进入这个仓库</span>
+<span class="nb">cd</span> electron-quick-start
+
+<span class="c1"># 安装依赖并运行</span>
+cnpm install <span class="o">&amp;&amp;</span> npm start
+
+<span class="c1"># git clone https://github.com/electron/electron-api-demos</span>
+<span class="c1"># git clone https://github.com/demopark/electron-api-demos-Zh_CN</span></pre><hr/>
       </div>
     </div>
   </div>
